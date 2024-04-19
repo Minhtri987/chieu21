@@ -39,17 +39,6 @@ CREATE TABLE IF NOT EXISTS `account` (
     PRIMARY KEY (`id`)
     ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Đang đổ dữ liệu cho bảng `account`
---
-
-INSERT INTO `account` (`id`, `email`, `password`, `name`, `role`) VALUES
-                                                                      (4, 'minhtri987', '$2y$12$pc279hbgVfDBGbIUP96OQu/8DNtmRpeSRnw6XG4Tl7vS2e0RxHmdq', 'minhtri', 'user'),
-                                                                      (8, 'minhtri9876', '$2y$12$NlS1Oprxi7vQPa5XdFwS7edRcsL0SVvoGI8RGjYEyDYa3xDfBaLIW', 'Truong Minh Tri', 'admin');
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `orderdetails`
 --
 
@@ -63,30 +52,6 @@ CREATE TABLE IF NOT EXISTS `orderdetails` (
     KEY `orderID` (`orderID`),
     KEY `productID` (`productID`)
     ) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Đang đổ dữ liệu cho bảng `orderdetails`
---
-
-INSERT INTO `orderdetails` (`orderDetailID`, `orderID`, `productID`, `quantity`) VALUES
-                                                                                     (100, 76, 2, 2),
-                                                                                     (101, 76, 3, 1),
-                                                                                     (102, 77, 2, 2),
-                                                                                     (103, 78, 1, 1),
-                                                                                     (104, 78, 2, 2),
-                                                                                     (105, 78, 3, 1),
-                                                                                     (106, 79, 3, 1),
-                                                                                     (107, 80, 1, 1),
-                                                                                     (108, 80, 2, 1),
-                                                                                     (109, 81, 2, 1),
-                                                                                     (110, 82, 2, 1),
-                                                                                     (111, 83, 4, 1),
-                                                                                     (112, 84, 3, 1),
-                                                                                     (113, 85, 3, 1),
-                                                                                     (114, 85, 2, 1);
-
--- --------------------------------------------------------
-
 --
 -- Cấu trúc bảng cho bảng `orders`
 --
@@ -101,24 +66,6 @@ CREATE TABLE IF NOT EXISTS `orders` (
     `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
     PRIMARY KEY (`id`)
     ) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Đang đổ dữ liệu cho bảng `orders`
---
-
-INSERT INTO `orders` (`id`, `name`, `phone`, `address`, `email`, `username`) VALUES
-                                                                                 (76, 'Truong Minh Tri', '0774018482', '23/2 Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtri35000.mtp@gmail.com', ''),
-                                                                                 (77, 'Truong Minh Tri', '0774018482', '23/2 Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtri35000.mtp@gmail.com', 'minhtri9876'),
-                                                                                 (78, 'Truong Minh Tri', '0774018482', '23/2 Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtri35000.mtp@gmail.com', 'minhtri9876'),
-                                                                                 (79, 'Truong Minh Tri', '0774018482', '23/2 Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtri35000.mtp@gmail.com', 'minhtri9876'),
-                                                                                 (80, 'Truong Minh Tri', '0774018482', '23/2 Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtri35000.mtp@gmail.com', 'minhtri9876'),
-                                                                                 (81, 'Truong Minh Tri', '0774018482', '23/2 Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtri35000.mtp@gmail.com', 'minhtri9876'),
-                                                                                 (82, 'Truong Minh Tri', '0774018482', '23/2 Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtri35000.mtp@gmail.com', 'minhtri9876'),
-                                                                                 (83, 'Truong Minh Tri', '0774018482', '23/2 Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtri35000.mtp@gmail.com', 'minhtri9876'),
-                                                                                 (84, 'Truong Minh Tri', '0774018482', '23/2 Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtri35000.mtp@gmail.com', 'minhtri9876'),
-                                                                                 (85, 'Minh Tri', '0774018482', 'Tổ 7,KP7,Thị Trấn Nhà Bè,Nhà Bè', 'minhtr.mtp@gmail.com', 'minhtri987');
-
--- --------------------------------------------------------
 
 --
 -- Cấu trúc bảng cho bảng `products`
